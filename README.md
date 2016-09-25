@@ -1,6 +1,6 @@
-### FbFeed
+# FbFeed
 
-# USAGE:
+## USAGE:
 - FbFeed class:
     class FbFeed ( array $CONF = [
         'pageID' => var 'your page ID', #required
@@ -60,7 +60,7 @@
     - %message% : string/txt # post content _only text
     - %content% : string/html # post content _full post
 
-# EXAMPLE:
+## EXAMPLE:
 <?php
 
     $Foo = new FbFeed([
@@ -74,17 +74,17 @@
     echo $Foo->render_feed();
 ?>
 
-# VERSION:
+## VERSION:
 - 2.0
 
-# LICENCE:
+## LICENCE:
 - If you are using this script:
     - you are agreeing with the licence,
     - you have to credit ORGINAL_AUTHOR in your project.
 - You can do everything except:
     - remove and edit (ORGINAL_AUTHOR and LICENCE) section in this header.
 
-# ORGINAL_AUTHOR:
+## ORGINAL_AUTHOR:
 - name: Mieszko Wawrzyniak
 - nickname: kaaboaye
 - e-mail: kaaboaye(at)gmail(dot)com

@@ -1,4 +1,6 @@
-USAGE:
+### FbFeed
+
+# USAGE:
 - FbFeed class:
     class FbFeed ( array $CONF = [
         'pageID' => var 'your page ID', #required
@@ -6,26 +8,26 @@ USAGE:
         'appSecret' => var 'your Facebook App secret', #required
         'token' => var 'your app token', #optional
         'debug' => bool,
-            # - optional,
-            # - WARNING:
+            - optional,
+            - WARNING:
               - debug is very precise
               - and it will leak for example App secret
               - so it HAVE to be DISABLE (FALSE) on production server,
-            # - default = false
+            - default = false
         'APIurl' => var 'url to Facebook API',
-            # - optional,
-            # - default = 'https://graph.facebook.com/v2.7'
+            - optional,
+            - default = 'https://graph.facebook.com/v2.7'
         'feedLimit' => int 'number of posts to download'
-            # - optional,
-            # - maximum = 100,
-            # - default = 25
+            - optional,
+            - maximum = 100,
+            - default = 25
         'date' => string 'date format output'
-            # - optional,
-            # - default = "d-m-Y G-i-s",
-            # - manual = 'http://php.net/manual/en/function.date.php#refsect1-function.date-parameters'
+            - optional,
+            - default = "d-m-Y G-i-s",
+            - manual = 'http://php.net/manual/en/function.date.php#refsect1-function.date-parameters'
         'template' => var 'template for feed',
-            # - optiobal,
-            # - default = '
+            - optiobal,
+            - default = '
                 <div class="post">
                     <a href="%url%">
                         %name%
@@ -58,8 +60,9 @@ USAGE:
     - %message% : string/txt # post content _only text
     - %content% : string/html # post content _full post
 
-EXAMPLE:
+# EXAMPLE:
 <?php
+
     $Foo = new FbFeed([
         'pageID' => '3453456345',
         'appID' => '34534563453453456345',
@@ -71,17 +74,17 @@ EXAMPLE:
     echo $Foo->render_feed();
 ?>
 
-VERSION:
+# VERSION:
 - 2.0
 
-LICENCE:
+# LICENCE:
 - If you are using this script:
     - you are agreeing with the licence,
     - you have to credit ORGINAL_AUTHOR in your project.
 - You can do everything except:
     - remove and edit (ORGINAL_AUTHOR and LICENCE) section in this header.
 
-ORGINAL_AUTHOR:
+# ORGINAL_AUTHOR:
 - name: Mieszko Wawrzyniak
 - nickname: kaaboaye
 - e-mail: kaaboaye(at)gmail(dot)com

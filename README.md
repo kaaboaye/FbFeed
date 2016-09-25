@@ -1,41 +1,43 @@
 # FbFeed
 
 ## USAGE:
-    - class FbFeed ( array $CONF = [
-        - 'pageID' => var 'your page ID', #required
-        - 'appID' => var 'your Facebook App ID', #required
-        - 'appSecret' => var 'your Facebook App secret', #required
-        - 'token' => var 'your app token', #optional
-        - 'debug' => bool,
-            - optional,
-            - WARNING:
-              - debug is very precise
-              - and it will leak for example App secret
-              - so it HAVE to be DISABLE (FALSE) on production server,
-            - default = false
-        - 'APIurl' => var 'url to Facebook API',
-            - optional,
-            - default = 'https://graph.facebook.com/v2.7'
-        - 'feedLimit' => int 'number of posts to download'
-            - optional,
-            - maximum = 100,
-            - default = 25
-        - 'date' => string 'date format output'
-            - optional,
-            - default = "d-m-Y G-i-s",
-            - manual = 'http://php.net/manual/en/function.date.php#refsect1-function.date-parameters'
-        - 'template' => var 'template for feed',
-            - optiobal,
-            - default = '
-                <div class="post">
-                    <a href="%url%">
-                        %name%
-                        %date%
-                        %content%
-                    </a>
-                </div>
-                ';
-        - ]);
+- syntax:
+
+        class FbFeed ( array $CONF = [
+            'pageID' => var 'your page ID', #required
+            'appID' => var 'your Facebook App ID', #required
+            'appSecret' => var 'your Facebook App secret', #required
+            'token' => var 'your app token', #optional
+            'debug' => bool,
+                - optional,
+                - WARNING:
+                  - debug is very precise
+                  - and it will leak for example App secret
+                  - so it HAVE to be DISABLE (FALSE) on production server,
+                - default = false
+            'APIurl' => var 'url to Facebook API',
+                - optional,
+                - default = 'https://graph.facebook.com/v2.7'
+            'feedLimit' => int 'number of posts to download'
+                - optional,
+                - maximum = 100,
+                - default = 25
+            'date' => string 'date format output'
+                - optional,
+                - default = "d-m-Y G-i-s",
+                - manual = 'http://php.net/manual/en/function.date.php#refsect1-function.date-parameters'
+            'template' => var 'template for feed',
+                - optiobal,
+                - default = '
+                    <div class="post">
+                        <a href="%url%">
+                            %name%
+                            %date%
+                            %content%
+                        </a>
+                    </div>
+                    ';
+        ]);
 
 - class methods:
     - render_feed() rendering bootstrap's style page feed,
